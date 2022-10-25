@@ -8,7 +8,7 @@ import {
 import {Slider} from '@miblanchard/react-native-slider'
 //import { useSelector } from 'react-redux'
 import { activeUser } from './reduxFunc'
-import Icon from 'react-native-vestor-icons/ FontAwesome'
+import Icon from 'react-native-vector-icons/FontAwesome5'
 export default function ButtonView({navigation}){
 const [svalue,setSValue] = useState(0.2);
 //const name = useSelector(state => state.name.value)
@@ -26,7 +26,9 @@ style={styles.buttons,
 
 const CustomThumb = () => (
     <View style={styles.componentThumbStyles}>
-        <Icon name='diamond' size=(25) color='white'/>
+        <Text>
+            <Icon name='diamond' size={25} color='white'/>
+        </Text>
     </View>
 );
 
@@ -80,6 +82,7 @@ borderRadius:'8'
     track: {
             borderRadius: 8,
             height: 40,
+            backgroundColor:'black',
      },
 })
 

@@ -16,7 +16,7 @@ return(
 const styles = StyleSheet.create({
 container:{
 position: 'absolute',
-top:'40%',
+top:40,
 },
 dummyText:{
 color:'red',

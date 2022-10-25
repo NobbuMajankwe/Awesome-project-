@@ -10,7 +10,11 @@ const [name, setName] = useState('');
 return(
 <View style={styles.container}>
     <TextInput style={styles.textInputs} placeholder='Enter your name' onChangeText={n =>setName(n)}/>
-    <Button title='Next' onPress={() => { name.trim() ? alert('Please enter name'): activeUser.dispatch({type:"update", item:{username:name})}}/>
+    <Button title='Next' onPress={() =>
+    { name.trim() ?
+    alert('Please enter name'):
+    activeUser.dispatch({type:"update", item:{username:name}})
+    }}/>
 </View>
 )
 }
@@ -18,12 +22,12 @@ return(
 const styles = StyleSheet.create({
 container:{
 flex:1,
-paddingTop:'50',
+paddingTop:50,
 //backgroundColor:'black',
 paddingHorizontal:'10%'
 },
 textInputs:{
-height:'40',
+height:40,
 backgroundColor:'white'
 }
 })
