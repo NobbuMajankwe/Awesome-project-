@@ -21,7 +21,7 @@ top:40,
 dummyText:{
 color:'red',
 fontWeight:'bold',
-fontSize:'30',
+fontSize:30,
 textAlign:'center'
 }
 })
