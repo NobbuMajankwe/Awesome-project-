@@ -8,7 +8,7 @@ import {
 import {Slider} from '@miblanchard/react-native-slider'
 //import { useSelector } from 'react-redux'
 import { activeUser } from './reduxFunc'
-import Icon from 'react-native-vector-icons/FontAwesome5'
+import Icon from 'react-native-vector-icons/MaterialCommunityIcons'
 export default function ButtonView({navigation}){
 const [svalue,setSValue] = useState(0.2);
 //const name = useSelector(state => state.name.value)
@@ -27,7 +27,7 @@ style={styles.buttons,
 const CustomThumb = () => (
     <View style={styles.componentThumbStyles}>
         <Text>
-            <Icon name='diamond' size={25} color='white'/>
+            <Icon name='diamond-stone' size={25} color='white'/>
         </Text>
     </View>
 );
@@ -57,19 +57,19 @@ paddingHorizontal:'10%'
 topText:{
 color:'white',
 fontWeight:'400',
-fontSize:'14',
+fontSize:14,
 textAlign:'right'
 },
 headText:{
 color:'yellow',
 fontWeight:'400',
-fontSize:'16',
+fontSize:16,
 textAlign:'center'
 },
 buttons:{
 width:'100%',
-height:'40',
-borderRadius:'8'
+height:40,
+borderRadius:8
 },
     componentThumbStyles : {
         alignItems: 'center',
