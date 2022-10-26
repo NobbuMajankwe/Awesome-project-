@@ -10,7 +10,7 @@ export default function LastView(){
 const data = activeUser.getState();
 return(
 <View style={styles.container}>
-<Text style={styles.dummyText}> hie</Text>
+    <Text style={styles.topText}>AccountHolder: {data.userName }</Text>
 </View>
 )
 }
@@ -18,15 +18,16 @@ return(
 const styles = StyleSheet.create({
 container:{
 flex: 1,
-paddingTop:'40%',
+paddingTop:'5%',
 backgroundColor:'black',
 paddingHorizontal:'10%'
 },
-dummyText:{
+topText:{
 color:'white',
+paddingBottom:'40%',
 fontWeight:'bold',
-fontSize:20,
-textAlign:'center'
+fontSize:14,
+textAlign:'right'
 }
 })
 

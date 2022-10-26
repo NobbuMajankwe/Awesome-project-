@@ -40,7 +40,7 @@ const CustomThumb = () => (
 
 return(
 <View style={styles.container}>
-    <Text style={styles.topText}>{ data.username }</Text>
+    <Text style={styles.topText}>AccountHolder: {data.userName }</Text>
     <Text style={styles.headText}> 4 variations of a button</Text>
     <AppButtons
         onPress={() => navigation.navigate('LastView')}
@@ -64,13 +64,13 @@ return(
 const styles = StyleSheet.create({
 container:{
 flex: 1,
-paddingTop:'40%',
+paddingTop:'5%',
 backgroundColor:'black',
 paddingHorizontal:'10%'
 },
 topText:{
 color:'white',
-paddingTop:'40%',
+paddingBottom:'40%',
 fontWeight:'bold',
 fontSize:14,
 textAlign:'right'
