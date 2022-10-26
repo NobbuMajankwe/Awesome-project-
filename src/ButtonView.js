@@ -17,15 +17,24 @@ const data = activeUser.getState();
 const AppButtons = ({onPress, backgroundColour, colour})=>(
 <TouchableOpacity
 onPress={onPress}
-style={styles.buttons,
-{backgroundColor:{backgroundColour},}>
- <Text style={{color:{colour}, fontSize:'13'}}>Press me</Text>
+style={{backgroundColor: backgroundColour,
+ width:"100%",
+ height:40,
+ borderRadius:8,
+ marginBottom:5,
+ justifyContent: 'center',
+ }}>
+ <Text style={{justifyContent: 'center', color: colour, fontSize:13, textAlign: 'center', }}>
+ Press me
+ </Text>
  </TouchableOpacity>
 );
 
 const CustomThumb = () => (
     <View style={styles.componentThumbStyles}>
-       <Text><Icon name='diamond-stone' size={25} color='white'/></Text>
+       <Text>
+        <Icon name='diamond-stone' size={25} color='white'/>
+       </Text>
     </View>
 );
 
@@ -33,12 +42,20 @@ return(
 <View style={styles.container}>
     <Text style={styles.topText}>{ data.username }</Text>
     <Text style={styles.headText}> 4 variations of a button</Text>
-    <AppButtons onPress={() => navigation.navigate('Variations')}
-    backgroundColor='transparent' colour='#2196F3'/>
-    <AppButtons onPress={() => navigation.navigate('Variations')}
-    backgroundColor='#3A3B3C' colour='#2196F3'/>
-    <AppButtons onPress={() => navigation.navigate('Variations')}
-    backgroundColor='#2196F3' colour='white'/>
+    <AppButtons
+        onPress={() => navigation.navigate('Variations')}
+        backgroundColour='transparent'
+        colour='#2196F3'/>
+
+    <AppButtons
+        onPress={() => navigation.navigate('Variations')}
+        backgroundColour='#3A3B3C'
+        colour='#2196F3'/>
+
+    <AppButtons
+        onPress={() => navigation.navigate('Variations')}
+    backgroundColour='#2196F3'
+    colour='white'/>
     <Slider animateTransitions renderThumbComponent={CustomThumb} trackStyle={styles.track} value={svalue} onValueChange={value=> setSValue({value})}/>
 </View>
 )
@@ -46,8 +63,8 @@ return(
 
 const styles = StyleSheet.create({
 container:{
-position: 'absolute',
-top:'40%',
+flex: 1,
+paddingTop:'40%',
 backgroundColor:'black',
 paddingHorizontal:'10%'
 },
@@ -64,9 +81,11 @@ fontSize:16,
 textAlign:'center'
 },
 buttons:{
-width:'100%',
+width:"100%",
 height:40,
-borderRadius:8
+borderRadius:8,
+marginBottom:5,
+textAlign: 'center'
 },
     componentThumbStyles : {
         alignItems: 'center',
@@ -80,6 +99,9 @@ borderRadius:8
             borderRadius: 8,
             height: 40,
             backgroundColor:'black',
+            width:'100%',
+            borderColor: '#2196F3',
+            borderWidth:1
      },
 })
 
