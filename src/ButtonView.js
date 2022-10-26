@@ -18,17 +18,14 @@ const AppButtons = ({onPress, backgroundColour, colour})=>(
 <TouchableOpacity
 onPress={onPress}
 style={styles.buttons,
-{backgroundColor:{backgroundColour},
- }}>
+{backgroundColor:{backgroundColour},}>
  <Text style={{color:{colour}, fontSize:'13'}}>Press me</Text>
  </TouchableOpacity>
 );
 
 const CustomThumb = () => (
     <View style={styles.componentThumbStyles}>
-        <Text>
-            <Icon name='diamond-stone' size={25} color='white'/>
-        </Text>
+       <Text><Icon name='diamond-stone' size={25} color='white'/></Text>
     </View>
 );
 
@@ -56,13 +53,13 @@ paddingHorizontal:'10%'
 },
 topText:{
 color:'white',
-fontWeight:'400',
+fontWeight:'bold',
 fontSize:14,
 textAlign:'right'
 },
 headText:{
 color:'yellow',
-fontWeight:'400',
+fontWeight:'bold',
 fontSize:16,
 textAlign:'center'
 },

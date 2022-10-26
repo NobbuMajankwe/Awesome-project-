@@ -10,10 +10,10 @@ const [userName, setName] = useState('');
 return(
 <View style={styles.container}>
     <TextInput style={styles.textInputs} placeholder='Enter your name' onChangeText={n =>setName(n)} defaultValue={userName}/>
-
+   <Text>{userName}</Text>
    <Button title='Next' onPress={() =>
     { userName ? (activeUser.dispatch({type:"update", item:{userName}}), navigation.navigate('Variations'))
-    : alert('Please enter name')}}/>
+    :alert('Please enter name')}}/>
 </View>
 )
 }
