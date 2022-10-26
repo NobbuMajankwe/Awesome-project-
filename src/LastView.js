@@ -4,8 +4,10 @@ import {
   Text,
   View,
 } from 'react-native';
+import { activeUser } from './reduxFunc'
 
 export default function LastView(){
+const data = activeUser.getState();
 return(
 <View style={styles.container}>
 <Text style={styles.dummyText}> hie</Text>

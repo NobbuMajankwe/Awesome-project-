@@ -10,7 +10,7 @@ import {Slider} from '@miblanchard/react-native-slider'
 import { activeUser } from './reduxFunc'
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons'
 export default function ButtonView({navigation}){
-const [svalue,setSValue] = useState(0.2);
+const [svalue,setSValue] = useState(0);
 //const name = useSelector(state => state.name.value)
 const data = activeUser.getState();
 
