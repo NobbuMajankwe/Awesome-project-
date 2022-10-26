@@ -43,17 +43,17 @@ return(
     <Text style={styles.topText}>{ data.username }</Text>
     <Text style={styles.headText}> 4 variations of a button</Text>
     <AppButtons
-        onPress={() => navigation.navigate('Variations')}
+        onPress={() => navigation.navigate('LastView')}
         backgroundColour='transparent'
         colour='#2196F3'/>
 
     <AppButtons
-        onPress={() => navigation.navigate('Variations')}
+        onPress={() => navigation.navigate('LastView')}
         backgroundColour='#3A3B3C'
         colour='#2196F3'/>
 
     <AppButtons
-        onPress={() => navigation.navigate('Variations')}
+        onPress={() => navigation.navigate('LastView')}
     backgroundColour='#2196F3'
     colour='white'/>
     <Slider animateTransitions renderThumbComponent={CustomThumb} trackStyle={styles.track} value={svalue} onValueChange={value=> setSValue({value})}/>
@@ -70,6 +70,7 @@ paddingHorizontal:'10%'
 },
 topText:{
 color:'white',
+paddingTop:'40%',
 fontWeight:'bold',
 fontSize:14,
 textAlign:'right'

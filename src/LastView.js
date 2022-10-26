@@ -15,13 +15,15 @@ return(
 
 const styles = StyleSheet.create({
 container:{
-position: 'absolute',
-top:40,
+flex: 1,
+paddingTop:'40%',
+backgroundColor:'black',
+paddingHorizontal:'10%'
 },
 dummyText:{
-color:'red',
+color:'white',
 fontWeight:'bold',
-fontSize:30,
+fontSize:20,
 textAlign:'center'
 }
 })
